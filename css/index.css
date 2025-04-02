@@ -1,0 +1,269 @@
+.index-body{
+    background-image:url(/images/shaka-zulu.jpeg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center center;
+}
+
+body{
+    margin:0;
+    font-family:Libre Baskerville;
+}
+
+header{
+    background-color:black;
+    color:white;
+    position:fixed;
+    width:100%;
+    top:0;
+}
+
+.navbar-menu-btn{
+    background-color:transparent;
+    padding:.4rem 1.2rem;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+.navbar-menu-btn:hover{
+    border:1px solid;
+    border-radius:5px;
+}
+
+.zulu-navbar-cont{
+    padding:1rem 0;
+    width:99%;
+    box-sizing:border-box;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+}
+
+.navbar-flex-left{
+    width:20%;
+    text-align:center;
+}
+
+.navbar-flex-middle{
+    width:80%;
+    border:solid;
+    text-align:left;
+}
+.navbar-flex-right{
+    width:0%;
+    overflow:hidden;
+    text-align:center;
+    display:none;
+}
+.navbar-flex-right div{
+    display:inline-block;
+    margin:0 1rem;
+}
+
+
+.navbar-flex-right a{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.navbar-flex-right a:hover{
+    box-shadow:5px 4px 5px;
+}
+
+.dropdown{
+    border:1px solid;
+}
+
+.dropdown-button{
+    background-color:transparent;
+    color:white;
+    padding:10px 20px;
+    text-align:center;
+    cursor:pointer;
+    border:none;
+}
+
+.dropdown-menu{
+    display:block;
+}
+
+.dropdown:hover{
+    background-color:rgb(45, 148, 212);
+    border-radius:5px;
+    border-width:2px;
+}
+
+.navbar-flex-middle h2,p{
+    margin:0;
+    text-transform:capitalize;
+    text-align:center;
+}
+
+.scroller-container{
+    width:100%;
+    height:10px;
+    background-color:transparent;
+}
+
+.scroller-content{
+    width:20%;
+    height:10px;
+    background-color:white;
+}
+
+.all-main{
+    width:99%;
+    margin:7rem auto 0;
+}
+
+.intro-section{
+    color:white;
+    width:100%;
+    box-sizing:border-box;
+    word-wrap:break-word;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    background-color:lightgray;
+    height:100%;
+    width:0%;
+    left:0;
+    overflow:hidden;
+    transition:.5s;
+    padding-top:3rem;
+}
+
+.mobile-menu a{
+    display:block;
+    color:black;
+    text-decoration:none;
+    padding:.9rem 0;
+    width:98%;
+    margin:0 auto;
+    border-radius:.5rem;
+}
+
+.mobile-menu a:hover{
+    background-color:white;
+}
+
+.close-mobile-menu{
+    position:absolute;
+    top:5px;
+    right:5px;
+    padding:.5rem 1.5rem;
+    background-color:transparent;
+    border:none;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.close-mobile-menu:hover{
+    background-color:white;
+    border-radius:.4rem;
+}
+
+footer{
+    background-color:lightgray;
+}
+
+.footer-flex{
+    display:flex;
+    flex-direction:column;
+    width:99%;
+    margin:0 auto;
+}
+
+.footer-flex-right{
+    background-color:lightgray;
+    padding:0rem 1rem 1rem;
+    box-sizing:border-box;
+}
+
+textarea{
+    resize:none;
+    width:100%;
+}
+
+.footer-flex-right form{
+    width:100%;
+}
+
+.commenter-email{
+    width:100%;
+    border:1px solid;
+    padding:.9rem 0;
+}
+
+.footer-flex-right input[type='submit']{
+    padding:.7rem 1.5rem; 
+    border:none;
+    color:black;
+    font-weight:bolder;
+    border-radius:10px;
+    cursor:pointer;
+    transition:1s;
+}
+
+.footer-flex-right input[type='submit']:hover{
+    background-color:black;
+    color:white;
+}
+
+.footer-flex-left a{
+    display:block;
+    text-decoration:none;
+    padding:15px;
+}
+
+.footer-flex-left a:hover{
+    background-color:gray;
+}
+
+.facebook-link{
+    color:blue;
+}
+
+.youtube-link{
+    color:red;
+}
+
+.tiktok-link{
+    color:black;
+}
+
+.twitter-link{
+    color:rgb(27, 121, 180);
+}
+
+@media screen and (min-width:880px){
+    .navbar-flex-left{
+        width:0;
+        overflow:hidden;
+        display:none;
+    }
+
+    .navbar-flex-middle{
+        width:30%;
+    }
+
+    .navbar-flex-right{
+        width:70%;
+        display:block;
+    }
+    .mobile-menu{
+        display:none;
+    }
+    .footer-flex{
+        flex-direction:row;
+        justify-content:space-between;
+    }
+    .footer-flex-left,.footer-flex-middle,.footer-flex-right{
+        width:33%;
+    }
+}
