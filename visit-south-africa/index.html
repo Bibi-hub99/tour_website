@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title title="school-of-technology">School Of Technology</title>
-    <meta name="viewport" content="width=device-width, initial-scale">
+    <title title="Visit SA">Visit SA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <link rel=https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -28,19 +28,19 @@
                 <p>blog about SA tourism</p>
             </div>
             <div class="navbar-flex-right">
-                <div><a href="">Home</a></div>
-                <div><a href="">About</a></div>
-                <div><a href="">Contacts</a></div>
-                <div><a href="">Book Now</a></div>
-                <div><a href="">Apply</a></div>
+                <div><a href="/">Home</a></div>
+                <div><a href="about.html">About</a></div>
+                <div><a href="contacts.html">Contacts</a></div>
+                <div><a href="bookings.html">Book Now</a></div>
+                <div><a href="applications.html">Apply</a></div>
                 <div class="dropdown">
-                    <button class="dropdown-button">Sign In</button>
+                    <button class="dropdown-button" id="sign-in-btn">Sign In</button>
                 </div>
         
             </div>
         </div>
         <div class="scroller-container">
-            <div class="scroller-content"></div>
+            <div class="scroller-content" id="scroller-content"></div>
         </div>
     </header>
 
@@ -48,38 +48,108 @@
         <section class="mobile-menu" id="mobile-menu">
             <button class="close-mobile-menu" id="close-mobile-menu"><i class="fa-solid fa-xmark"></i>Close</button>
             <div class="mobile-menu-links">
-                <a href="/" class="active">Home</a>
-                <a href="">About</a>
-                <a href="">Contacts</a>
-                <a href="">Book Now</a>
-                <a href="">Apply</a>
-                <a href="">Sign In</a>
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="contacts.html">Contacts</a>
+                <a href="bookings.html">Book Now</a>
+                <a href="applications.html">Apply</a>
+                <a href="sign-in.html">Sign In</a>
             </div>
         </section>
         <section class="intro-section">
-            <h2 style="color:red;text-shadow:2px 4px 10px black">
+            <h2>
                 <mark><b>South Africa</b></mark>, a rapidly growing country and most impressive developing country throghout the entire continent of Africa.
                 the country has had rough and very not good civility once in a period, located in the southern coast of the continent is where it is leading most African countries with technology and infrastructure.
             </h2>
-            <h2 style="color:green;text-shadow:2px 4px 10px black">
+            <h2>
                 So we here are a website dedicated to show different sides of this very well known country and make your understanding 
                 about it even better.So all in all what we do is to guide your visit and offer advices on popular places and a must see and visit places and a lot 
                 more.we are a country enclosed in distinct ecosystems and divided into nine provinces which each offer it's individual experience but not a bad one of course.
             </h2>
-            <h2 style="color:blue;text-shadow:2px 4px 10px black">
+            <h2>
                 To give you a hint that will make you even love to visit this country if you never done it before and to visit again 
                 if you have visited once,this is what makes this country unique,recognizable and amongst the top tourism endpoints:<ins>varied topography,great natural beauty and cultural diversity
                 </ins>,by the way this is the only african country where not will you find different nationalities core existing but ethnicities of all kind and religions.
             </h2>
         </section>
+        <section class="sliders-section">
+            <div class="slides-container">
+                <div class="slides">
+                    <p>1/8</p>
+                    <img src="/images/pexels-photo-963713.jpeg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>Experience the sound and naturality of the mountains.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>2/8</p>
+                    <img src="/images/pexels-photo-1320609.jpeg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>Take a chance to watch an interesting big cat like cheetah in the wild.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>3/8</p>
+                    <img src="/images/pexels-photo-2674051.jpeg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>The Lion after doing it's kill as an apex predator in South Africa.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>4/8</p>
+                    <img src="/images/pexels-photo-3193551.jpeg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>Traditional Zulu man and Wife in the homestead.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>5/8</p>
+                    <img src="/images/pexels-photo-5494693.jpeg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>Sunset view in relation to the huge mountains of ours.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>6/8</p>
+                    <img src="/images/pexels-taryn-elliott-3889927.jpg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>A forever flowing stream of water also known as Waterfall.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>7/8</p>
+                    <img src="/images/pexels-thomas-chauke-437438-3177662.jpg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>an image of a young african boy during afternoon.</h2>
+                    </div>
+                </div>
+                <div class="slides">
+                    <p>8/8</p>
+                    <img src="/images/view-quiver-trees-forest-with-beautiful-sky-sunset-twilight-sky-scene-keetmanshoop-namibia_1150-21606.jpg" class="slide-img">
+                    <div class="slides-des">
+                        <h2>A chilling picture of wonderful baobab trees in the near sunset moment.</h2>
+                    </div>
+                </div>
+                <span class="back-slide-btn" onclick="nextSlide(-1)"><</span>
+                <span class="forward-slide-btn" onclick="prevSlide(+1)">></span>
+            </div>
+            <div class="number-selects">
+                <span class="number-value" onclick="currentSlide(1)">1</span>
+                <span class="number-value" onclick="currentSlide(2)">2</span>
+                <span class="number-value" onclick="currentSlide(3)">3</span>
+                <span class="number-value" onclick="currentSlide(4)">4</span>
+                <span class="number-value" onclick="currentSlide(5)">5</span>
+                <span class="number-value" onclick="currentSlide(6)">6</span>
+                <span class="number-value" onclick="currentSlide(7)">7</span>
+                <span class="number-value" onclick="currentSlide(8)">8</span>
+            </div>
+
+        </section>
+        
     </main>
 
     <!--<i class="fa-solid fa-bars"></i>-->
     
-
-
-    <br>
-    <br>
     <br>
     <footer>
         <div class="footer-flex">
@@ -100,17 +170,19 @@
                     3080
                 </address>
                 <cite>
-                    A blog about one of the most interesting figures of Africa
+                    A blog about one of the most interesting figures of Africa<br>
+                    send email:<a href="mailto:anxumalo000@gmail.com">amahle comfort</a>
                 </cite>
+                
                 
             </div>
             <div class="footer-flex-right">
                 <h4>Additionals</h4>
-                <form name="" autocomplete="off">
-                    <textarea rows="7" placeholder="Send a message to us...."></textarea>
+                <form action="/message-us" name="" autocomplete="off">
+                    <textarea rows="7" name="message" placeholder="Send a message to us...." required minLength="1"></textarea>
                     <br>
                     <br>
-                    <input type="email" name="email" class="commenter-email" placeholder=" Email">
+                    <input type="email" name="message-sender-email" class="commenter-email" placeholder=" Email" required>
                     <br>
                     <br>
                     <input type="submit">
@@ -121,5 +193,53 @@
 
     <script src="../js/index.js"></script>
 </body>
+
+<script>
+
+    let slideIndex = 1;
+
+    function showSlide(n){
+        let slides = document.getElementsByClassName('slides')
+        let numberSelects = document.getElementsByClassName('number-value')
+        let i;
+        for(i=0;i<slides.length;i++){
+            slides[i].style.display = 'none'
+        }
+        for(i=0;i<numberSelects.length;i++){
+            numberSelects[i].className = numberSelects[i].className.replace("active","")
+        }
+
+        if(n > slides.length){
+            slideIndex = 1
+        }
+        if(n < 1){
+            slideIndex = slides.length;
+        }
+
+        slides[slideIndex-1].style.display = 'block'
+        numberSelects[slideIndex-1].className += ' active'
+    }
+
+    function nextSlide(n){
+        showSlide(slideIndex+=n)
+    }
+
+    function prevSlide(n){
+        showSlide(slideIndex+=n)
+    }
+
+    function currentSlide(n){
+        showSlide(slideIndex=n)
+    }
+
+    showSlide(slideIndex)
+
+    window.onscroll = function(){
+        const scroller = document.body.scrollTop || document.documentElement.scrollTop
+        const scrollerDerive = document.documentElement.scrollHeight - document.documentElement.clientHeight
+        document.getElementById('scroller-content').style.width = (scroller/scrollerDerive)*100+'%'
+    }
+
+</script>
 
 </html>
