@@ -64,6 +64,7 @@
 
             <div style="overflow:auto">
                 <table>
+                    <caption>Our Contacts</caption>
                     <thead>
                         <tr>
                             <th>Department</th>
@@ -83,8 +84,65 @@
                             <td>084 234 2390</td>
                             <td>visitSA.twitter.com</td>
                         </tr>
+                        <tr>
+                            <td>Department of Logistics</td>
+                            <td>056 355 3454</td>
+                            <td>Visit SA</td>
+                            <td>visitSA_public_relation@gmail.com</td>
+                            <td>084 234 2390</td>
+                            <td>visitSA.twitter.com</td>
+                        </tr>
+                        <tr>
+                            <td>Department of Logistics</td>
+                            <td>056 355 3454</td>
+                            <td>Visit SA</td>
+                            <td>visitSA_public_relation@gmail.com</td>
+                            <td>084 234 2390</td>
+                            <td>visitSA.twitter.com</td>
+                        </tr>
+                        <tr>
+                            <td>Department of Logistics</td>
+                            <td>056 355 3454</td>
+                            <td>Visit SA</td>
+                            <td>visitSA_public_relation@gmail.com</td>
+                            <td>084 234 2390</td>
+                            <td>visitSA.twitter.com</td>
+                        </tr>
+                        <tr>
+                            <td>Department of Logistics</td>
+                            <td>056 355 3454</td>
+                            <td>Visit SA</td>
+                            <td>visitSA_public_relation@gmail.com</td>
+                            <td>084 234 2390</td>
+                            <td>visitSA.twitter.com</td>
+                        </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <button class="collapse-btn">Frequently Asked Question 1</button>
+            <div class="collapse-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates adipisci vitae aliquam ratione ipsa est beatae nihil necessitatibus, accusamus enim iure assumenda! Neque voluptatum corrupti, ut delectus nihil cumque.
+            </div>
+            <button class="collapse-btn">Frequently Asked Question 2</button>
+            <div class="collapse-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates adipisci vitae aliquam ratione ipsa est beatae nihil necessitatibus, accusamus enim iure assumenda! Neque voluptatum corrupti, ut delectus nihil cumque.
+            </div>
+            <button class="collapse-btn">Frequently Asked Question 3</button>
+            <div class="collapse-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates adipisci vitae aliquam ratione ipsa est beatae nihil necessitatibus, accusamus enim iure assumenda! Neque voluptatum corrupti, ut delectus nihil cumque
+            </div>
+            <button class="collapse-btn">Frequently Asked Question 4</button>
+            <div class="collapse-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates adipisci vitae aliquam ratione ipsa est beatae nihil necessitatibus, accusamus enim iure assumenda! Neque voluptatum corrupti, ut delectus nihil cumque.
+            </div>
+            <button class="collapse-btn">Frequently Asked Question 5</button>
+            <div class="collapse-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius voluptates adipisci vitae aliquam ratione ipsa est beatae nihil necessitatibus, accusamus enim iure assumenda! Neque voluptatum corrupti, ut delectus nihil cumque.
             </div>
         </section>
 
@@ -141,6 +199,19 @@
         const scroller = document.body.scrollTop || document.documentElement.scrollTop
         const scrollerDerive = document.documentElement.scrollHeight - document.documentElement.clientHeight
         document.getElementById('scroller-content').style.width = (scroller/scrollerDerive)*100+'%'
+    }
+
+    let collapsible = document.getElementsByClassName("collapse-btn")
+    for(i=0;i<collapsible.length;i++){
+        collapsible[i].addEventListener("click",function(){
+            this.classList.toggle("opened-collapse")
+            var sibling = this.nextElementSibling;  
+            if(sibling.style.display === 'block'){
+                sibling.style.display = 'none'
+            }else{
+                sibling.style.display = 'block'
+            }
+        })
     }
     
 
