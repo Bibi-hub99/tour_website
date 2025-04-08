@@ -15,5 +15,5 @@ function hideMobileMenu(){
 }
 
 function navigate(){
-    window.location.href = 'sign-in.html'
+    window.location.href = 'visit-south-africa/sign-in.html'
 }
