@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Apply For Membership</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="applications.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Pathway+Gothic+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<script src="https://kit.fontawesome.com/a2dd159b70.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body onsubmit="return personalInfoValidate()">
+        <div class="apply-form-cont">
+            <h3 style="text-align:center;background-color:black;color:white;padding:2rem 0;margin:0;">Membership application</h3>
+            <form name="membership-form" autocomplete="off">
+                <fieldset>
+                    <legend>Personal:</legend>
+                    <label for="firstnames">First Names:</label><br><br>
+                    <input type="text" name="firstnames" id="firstnames"><br><br>
+                    <label for="lastnames">Last Name:</label><br><br>
+                    <input type="text" name="lastnames" id="lastnames"><br><br>
+                    <label for="date_of_birth">Date Of Birth:</label><br><br>
+                    <input type="date" name="date_of_birth" id="date_of_birth"><br><br>
+                    <label for="age">Age:</label><br><br>
+                    <input type="number" name="age" id="age"><br><br>
+                    <label for="gender">Gender:</label><br><br>
+                    <input type="radio" name="gender" required id="male" value="male"><label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female"><label for="female">Female</label>
+                    <br>
+                    <br>
+                    <label for="idCopy" class="htmlForidCopy">upload ID <i class="fa-solid fa-upload"></i><label id="idCopyFile"></label>
+                        <input type="file" name="idCopy" class="idCopy" id="idCopy">
+                    </label>
+                    <br>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Contacts:</legend>
+                    <label for="email">Email:</label><br><br>
+                    <input type="email" name="email" id="email"><br><br>
+                    <label for="telephone">Telephone:</label><br><br>
+                    <input type="tel" name="telephone" id="telephone">
+                </fieldset>
+                <fieldset>
+                    <legend>Additional information:</legend>
+                    <select id="country">
+                        <option value="">--Select Country--</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="None of the above">None of the above</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="language">Select language:</label>
+                    <br>
+                    <input list="languages" id="language" style="width:100%;box-sizing:border-box;padding:.6rem 0;">
+                    <datalist id="languages">
+                        <option value="English">English</option>
+                        <option value="Spanish">Spanish</option>
+                        <option value="Swahili">Swahili</option>
+                        <option value="Mandarin">Mandarin</option>
+                    </datalist>
+                    <br>
+                    <br>
+                    <details>
+                        <summary>View terms and conditions</summary>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit laudantium iure perspiciatis alias deleniti, amet quia ex autem? Provident rerum qui voluptas ipsam labore quia ratione doloremque iusto explicabo tempora?
+                        </p>
+                    </details>
+                    <br>
+                    <input type="checkbox" name="terms&conds1" required id="terms&conds1"><label for="terms&conds1">Terms And Conditions 1</label><br>
+                    <input type="checkbox" name="terms&conds2" required id="terms&conds2"><label for="terms&conds2">Terms And Conditions 2</label><br><br>
+                    <input type="reset"><input type="submit">
+                </fieldset>
+            </form>
+        </div>
+
+    </body>
+
+    <script>
+
+        function personalInfoValidate(){
+
+            const firstNames = document.getElementById('firstnames').value
+            const lastName = document.getElementById('lastnames').value
+            const dateOfBirth = document.getElementById('date_of_birth').value
+            const age = document.getElementById('age').value
+            const email = document.getElementById('email').value
+            const telephone = document.getElementById('telephone').value
+            const country = document.getElementById('country').value
+            const language = document.getElementById('language').value
+
+            try{
+                if(firstNames.trim()==""){
+                    throw "Fill the first names"
+                }else if(firstNames.match(/[0-9]/g)){
+                    throw "Name must only have alphabets"
+                }
+
+                if(lastName.trim()==""){
+                    throw "Fill the surname"
+                }else if(lastName.match(/[0-9]/g)){
+                    throw "Last name must only have alphabets"
+                }else if(lastName.length >= 20){
+                    throw "too many characters for surname"
+                }
+
+                if(age.trim()==""){
+                    throw "fill the age"
+                }
+
+                if(isNaN(age)){
+                    throw 'age must be a number'
+                }else if(age <= 17){
+                    throw 'age must be above or be equal to 18'
+                }else if(age >= 36){
+                    throw 'age must be below or equal to 35'
+                }
+
+                if(email.trim()==''){
+                    throw 'Fill the email field'
+                }else if(!email.includes('@')){
+                    throw 'Email must have @'
+                }else if(!email.endsWith('@gmail.com')){
+                    throw 'Email must end with gmail.com'
+                }
+
+                if(telephone.trim()==""){
+                    throw 'Fill the telephone field'
+                }else if(telephone.length !== 10){
+                    throw 'digits must not be more than 10 or less than 10'
+                }else if(telephone.match(/[A-Z]/g) || telephone.match(/[a-z]/g)){
+                    throw 'telephone must not include alphabets'
+                }
+
+                if(country.trim()===''){
+                    throw 'Select you country'
+                }
+                if(!language){
+                    throw 'Select your language'
+                }
+    
+            }catch(err){
+                alert(err)
+                return false
+            }finally{
+                console.log('done validations')
+            }
+
+        }
+
+    </script>
+
+</html>
