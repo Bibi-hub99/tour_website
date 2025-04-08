@@ -15,5 +15,5 @@ function hideMobileMenu(){
 }
 
 function navigate(){
-    window.location.href = 'sign-in.html'
+    
 }
