@@ -15,5 +15,10 @@ function hideMobileMenu(){
 }
 
 function navigate(){
-    window.location.href = 'sign-in.html'
+    const pathName = this.location.pathname
+    if(pathName == '/'){
+        window.location.href = './visit-south-africa/sign-in.html'
+    }else{
+        window.location.href = 'sign-in.html'
+    }
 }
